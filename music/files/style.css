@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: sans-serif;
+    display: grid;
+    place-items: center;
+    background: url("../Artists/music\ -wallpaper.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#btn {
+    padding: 10px 20px;
+    display: flex;
+    width:10rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    justify-content: space-between;
+    position: absolute;
+    margin-left: 80%;
+}
+#switch-btn {
+    color: #e32636;
+}
+.switch {
+    width: 50%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #e32636;
+    position: absolute;
+    border-radius: 10px;
+    transition: 1s;
+
+}
+.on {
+    color: #000;
+    font-size: 25px;
+}
+.mute {
+    color: #000;
+    font-size: 25px;
+}
+.slide .switch {
+    left: 50%;
+}
+.music-container {
+    height: 600px;
+    width: 500px;
+    text-align: center;
+    background: rgba( 49, 255, 0, 0 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 0px );
+-webkit-backdrop-filter: blur( 0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 )
+}
+.image img {
+    width: 300px;
+    height: 300px;
+    margin: 3% 0 0 0;
+    border-radius: 10px;
+}
+.artist {
+    margin: 5% 0 0 0;
+    color: #eee;
+}
+#audio {
+    margin: 3% 0 0 0;
+}
+.btn-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    margin: 10% 0 0 0;
+}
+#play {
+    font-size:40px;
+    margin: -1% 0 0 0;
+    color: #eee;
+    transition: 0.5s;
+}
+#prev {
+    font-size: 30px;
+    color: #eee;
+}
+#forw {
+    font-size: 30px;
+    color: #eee;
+}
+.shuffle {
+    font-size: 25px;
+    color: #eee;
+    transition: 0.5s;
+}
+.repeat {
+    font-size: 25px;
+    margin: 1% 0 0 0;
+    color: #eee;
+    transition: 0.5s;
+}
+.volume-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 9% 0 0 0;
+}
+.icon {
+    font-size: 30px;
+    margin: 0 30px 0 0;
+    color: #eee;
+    transition: 0.5s;
+}
+.input {
+    margin: 2% 0 0 0;
+}
+
+input {
+    width: 200px;
+}
+
+#count {
+    margin: -7px 0 0 10px;
+    font-size: 40px;
+    color:#eee;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#sponsor {
+    color: green;
+    margin: 2% 0 0 0;
+}
