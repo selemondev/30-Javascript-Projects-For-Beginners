@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.preloader {
+    background: #000;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: grid;
+    place-content: center;
+    z-index: 4;
+}
+
+.loader {
+    border: solid 5px #fff;
+    border-bottom-color: #1c87c9;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: 1.5s linear infinite spinner;
+}
+
+@keyframes spinner {
+    0% {
+      transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+  }
+
+
+.content {
+    display: grid;
+    place-items: center;
+    padding-top: 20%;
+}
+
+.content-title {
+    color: text-white;
+    font-weight: font-bold;
+}

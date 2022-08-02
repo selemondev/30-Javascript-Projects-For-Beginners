@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Vanilla Store</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav_title">
+                <h1>Vanilla Store</h1>
+            </div>
+
+            <div class="cart_items">
+                <h2 class="items"></h2>
+            </div>
+            <div class="nav_bag">
+                <p><i class='bx bx-shopping-bag'></i></p>
+            </div>
+        </nav>
+
+    <!-- cart section -->
+    <section>
+        <div class="cart_container">
+            <div class="cart_close_icon">
+                <p class="close_icon" id="close_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" fill="currentColor" class="catIcon" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                    </svg>                
+                </p>
+            </div>
+
+            <div class="cart_container_title">
+                <h2 class="cart">Your Cart</h2>
+            </div>
+
+            <div class="cart_products">
+            </div>
+
+            <div class="cartTotalPrice">
+                <h2 class="totalPrice"></h2>
+            </div>
+
+            <div class="clearCart">
+                <button class="btn_clear">Clear Cart</button>
+            </div>
+        </div>
+    </section>
+
+    </header>
+
+    <!-- product section -->
+
+    <section>
+        <div class="products_title">
+            <h2 class="title">Our Products</h2>
+        </div>
+        <div class="products_container">
+        
+        </div>
+        </div>
+
+    </section>
+
+    <script src="./db/products.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

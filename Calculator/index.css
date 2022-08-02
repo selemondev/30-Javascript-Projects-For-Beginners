@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    place-items: center;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+ 
+
+.calculator-container {
+    display: grid;
+}
+
+.dot {
+    grid-column: span 2;
+}
+
+.equal {
+    grid-row: span 2;
+}
+
+#buttons-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    text-align: center;
+}
+
+/* Input */
+#input {
+    width: 100%;
+    padding-right: 10px;
+    font-size: 3em;
+    text-align: right;
+    height: 2em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #FDFEFE;
+    background-color: #223850;
+    transition: all 0.3s ease-in
+}
+
+/* Btn's */
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    border: 0.3px solid rgba(251, 253, 255, 0.171);
+    
+}
+
+.btn-num {
+    background-color: #223850;
+    color: #6885A7;
+}
+
+.btn-num:hover {
+    background-color: #233B55;
+}
+
+.btn-operator {
+    background-color: #128094;
+    color: #ffffff;
+}
+
+.btn-operator:hover {
+    background-color: rgb(52, 155, 196) !important
+}
+ 
+.equal{
+    background-color: #e77c18;
+}

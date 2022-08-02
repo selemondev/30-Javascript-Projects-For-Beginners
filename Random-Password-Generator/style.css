@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.random-password-generator-title {
+    font-size: 20px;
+}
+
+.random-password-generator-input {
+    text-align: center;
+}
+
+.input {
+    padding: 10px 4px;
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.random-password-generator-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.generate, .copy {
+    margin-top: 20px;
+    padding: 10px 10px;
+}
+
+.generate {
+    color: #fff;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.generate:hover {
+    background-color: #b80a0a;
+    transition: 1s;
+}
+
+.copy {
+    color: #fff;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.copy:hover {
+    background-color: rgb(6, 158, 6);
+    transition: 1s;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .random-password-generator-title {
+        font-size: 30px;
+    }
+
+    .input {
+        width: 400px;
+    }
+
+    .generate, .copy {
+        padding: 10px 20px;
+    }
+}
+

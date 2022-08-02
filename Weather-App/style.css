@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.content-title {
+    text-align: center;
+    margin: 10px;
+}
+.input-container {
+    padding: .5em 1em;
+}
+
+.input {
+    padding: 8px 5px;
+    width: 250px;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.search-btn {
+    padding: 7px 5px;
+    border-radius: .5em;
+    width: 100px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    background-color: #ff3838;
+    color: #fff;
+}
+
+.search-btn:hover {
+    background: #ff0000;
+}
+
+.weather-data-container, .weather-error {
+    display: grid;
+    place-items: center;
+}
+
+.city-data {
+    padding-top: 40px;
+}
+
+.text-error {
+    font-weight: bold;
+    color: #ff0000;
+}

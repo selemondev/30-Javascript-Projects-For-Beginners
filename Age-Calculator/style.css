@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background: #eee;
+    display: grid;
+    place-items: center;
+}
+
+.age-container {
+    height: 350px;
+    width: 300px;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.age-container-title {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.age-container-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 40px;
+}
+input {
+    padding: 10px 4px;
+    width: 50px;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid rgb(188, 188, 188);
+    text-align: center;
+}
+
+.age-container-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.text {
+    font-size: 20px;
+}
+
+.age-container-button {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.age-btn {
+    padding: 10px 50px;
+    border-radius: 10px;
+    border: 1px solid green;
+    background: green;
+    font-weight: bold;
+    color: #fff;
+    transition: 1s;
+}
+
+.age-btn:hover {
+    background-color: rgb(4, 165, 4);
+}
+
+@media only screen and (min-width: 768px) {
+    .age-container {
+        width: 400px;
+    }
+}
