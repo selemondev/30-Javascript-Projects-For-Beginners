@@ -44,7 +44,6 @@ renderProducts();
 
 // get items from localStorage
 let cart = localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems")) : [];
-console.log(cart)
 updateCart();
 function renderCartProducts() {
     cartProductEl.innerHTML = "";

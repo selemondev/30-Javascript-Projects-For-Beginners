@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+</head>
+<body>
+	<main class="app">
+
+		<section class="greeting">
+			<h2 class="title">
+				What's up, <input type="text" id="name" placeholder="Name here" />
+			</h2>
+		</section>
+		
+		<!-- New Todo -->
+		<section class="create-todo">
+			<h3>CREATE A TODO</h3>
+			<form id="new-todo-form">
+				<h4>What's on your todo?</h4>
+				<input 
+					type="text" 
+					placeholder="e.g. Get some milk"
+					name="content"
+					id="content" />
+				
+				<h4>Pick a category</h4>
+				<div class="options">
+					<label>
+						<input type="radio" name="category" id="category1" value="business" /> 
+						<span class="bubble business"></span>
+						<div>Business</div>
+					</label>
+					<label>
+						<input type="radio" name="category" id="category2" value="personal" />
+						<span class="bubble personal"></span>
+						<div>Personal</div>
+					</label>
+				</div>
+
+				<input type="submit" value="Add todo" />
+			</form>
+		</section>
+		<!-- End of New Todo -->
+
+		<!-- Todo List -->
+		<section class="todo-list">
+			<h3>TODO LIST</h3>
+			<div class="list" id="todo-list"></div>
+		</section>
+		<!-- End of Todo List -->
+
+	</main>
+    <script src="./index.js"></script>
+</body>
+</html>
