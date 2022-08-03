@@ -16,6 +16,7 @@ for (let i = 0; i < dropList.length; i++) {
     });
 }
 
+// load the flag
 function loadFlag(element){
     for(let code in country_list){
         if(code == element.value){

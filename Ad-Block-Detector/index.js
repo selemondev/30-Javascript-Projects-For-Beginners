@@ -1,3 +1,4 @@
+// Enable the chrome ad block extension to see the 'Ad Block Sign'
 const detect = document.querySelector("#detect");
     const wrapper = document.querySelector(".wrapper");
     const button = wrapper.querySelector("button");
