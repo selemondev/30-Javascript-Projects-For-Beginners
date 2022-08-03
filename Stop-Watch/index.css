@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+#timeContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    place-content: center;
+    place-items: center;
+    margin-top: 100px;
+    height: 140px;
+    width: 400px;
+    background-color: #eee;
+    border-radius: 1.563rem;
+}
+
+#timeDisplay {
+    grid-column: 1 / -1;
+    font-size: 3.375rem;
+    color: rgb(31, 182, 31);
+}
+
+.timerButton {
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#startButton {
+    background: #008000;
+}
+
+#pauseButton {
+    background: #ffd900;
+}
+
+#resetButton {
+    background: #ff0000;
+}
+
+#lapButton {
+    background: #ffa500;
+}
+
+#lapContainer {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    min-width: 290px;
+    width: 320px;
+    height: 70vh;
+}
+
+#lapContainer ul {
+    padding: 0;
+    list-style: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 68vh;
+    width: 80%;
+}
+
+@media only screen and (max-width: 680px) {
+    #timeContainer {
+        display: grid;
+        grid-template-columns: repeat(4, 64px);
+        width: 95vw;
+        height: 140px;
+    }
+
+    #timeDisplay {
+        font-size: 3.052rem;
+    }
+
+    .timerButton{
+        text-align: center;
+        font-size: 1rem;
+        width: 60px;
+        height: 28px;
+        padding: 0;
+    }
+
+    #lapContainer {
+        display: grid;
+        justify-items: center;
+        text-align: center;
+        min-width: 290px;
+        width: 92vw;
+        height: 65vh;
+    }
+
+    #lapContainer ul {
+        padding: 0;
+        list-style: none;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 63vh;
+        width: 80%;
+    }
+}
