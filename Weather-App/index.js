@@ -32,7 +32,10 @@ const fetchData = () => {
         </div>
         </div>
       `;
-      weatherDataEl.appendChild(weather_information_data)
+      weatherDataEl.appendChild(weather_information_data);
+      setTimeout(() => {
+        weatherDataEl.removeChild(weather_information_data);
+      }, 2000)
     })
     .catch(() => {
         weatherError.textContent = "Please enter a valid Country / City name"
