@@ -14,7 +14,7 @@ closeCartEl.addEventListener("click", () => {
     cartContainerEl.classList.remove("active")
 });
 
-function renderProducts () {
+function renderProducts() {
     productsContainerEl.innerHTML = "";
     products.forEach((product) => {
         const { id, title, image, price } = product;
@@ -36,7 +36,7 @@ function renderProducts () {
     </div>
         `;
 
-    productsContainerEl.appendChild(productEl)
+        productsContainerEl.appendChild(productEl)
     })
 };
 renderProducts();
@@ -82,15 +82,15 @@ renderCartProducts();
 
 // add to cart functionality
 
-function addToCart (id) {
+function addToCart(id) {
     // check if there is an existing product in the cart
-    if(cart.some((item) => item.id === id)) {
+    if (cart.some((item) => item.id === id)) {
         changeNumberOfUnits("plus", id)
     } else {
         const product = products.find((product) => product.id === id);
         cart.push({
             ...product,
-            numberOfUnits:1,
+            numberOfUnits: 1,
         })
     };
 
@@ -99,14 +99,14 @@ function addToCart (id) {
 
 // remove from cart functionality
 
-function removeFromCart (id) {
+function removeFromCart(id) {
     cart = cart.filter((item) => item.id !== id);
     updateCart()
 };
 
 // updating our cart 
 
-function updateCart ()  {
+function updateCart() {
     renderCartTotal();
     renderCartProducts();
     localStorage.setItem("cartItems", JSON.stringify(cart));
@@ -116,23 +116,23 @@ updateCart()
 
 // change amount
 
-function changeNumberOfUnits(action, id){
+function changeNumberOfUnits(action, id) {
     cart = cart.map((item) => {
         let numberOfUnits = item.numberOfUnits;
-    
+
         if (item.id === id) {
-          if (action === "minus" && numberOfUnits > 1) {
-            numberOfUnits--;
-          } else if (action === "plus" && numberOfUnits < item.instock) {
-            numberOfUnits++;
-          }
+            if (action === "minus" && numberOfUnits > 1) {
+                numberOfUnits--;
+            } else if (action === "plus" && numberOfUnits < item.instock) {
+                numberOfUnits++;
+            }
         }
-    
+
         return {
-          ...item,
-          numberOfUnits,
+            ...item,
+            numberOfUnits,
         };
-      });
+    });
 
     updateCart();
 }
@@ -160,9 +160,11 @@ btnClear.addEventListener("click", () => {
     clearCart()
 })
 function clearCart() {
-    if(confirm("Do you want to clear the cart")) {
-        cart = [];
-        localStorage.setItem("cartItems", JSON.stringify(cart));
-        updateCart()
+    if (cart.length >= 1) {
+        if (confirm("Do you want to clear the cart")) {
+            cart = [];
+            localStorage.setItem("cartItems", JSON.stringify(cart));
+            updateCart()
+        };
     }
 }
