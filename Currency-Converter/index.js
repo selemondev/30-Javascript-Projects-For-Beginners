@@ -1,7 +1,7 @@
-const dropList = document.querySelectorAll("form select"),
-fromCurrency = document.querySelector(".from select"),
-toCurrency = document.querySelector(".to select"),
-getButton = document.querySelector("form button");
+const dropList = document.querySelectorAll("form select");
+const fromCurrency = document.querySelector(".from select");
+const toCurrency = document.querySelector(".to select");
+const getButton = document.querySelector("form button");
 
 // get your api-key from "https://app.exchangerate-api.com/"
 const API_KEY = "";
@@ -16,7 +16,7 @@ for (let i = 0; i < dropList.length; i++) {
     });
 }
 
-// load the flag
+// load the flags
 function loadFlag(element){
     for(let code in country_list){
         if(code == element.value){
