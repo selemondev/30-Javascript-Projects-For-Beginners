@@ -32,7 +32,7 @@ body{
 }
 
 .text, .key-code, .key-name{
-  font-size: 45px;
+  font-size: 30px;
   color: #3414bc;
   font-weight: 500;
 }
