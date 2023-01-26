@@ -1,6 +1,6 @@
 const KEY = "63ef9c1da41cd3c843dcec9ed2264b73";
 const trending = `https://api.themoviedb.org/3/trending/all/week?api_key=${KEY}&language=en-US`;
-const search_api =`https://api.themoviedb.org/3/search/movie?&api_key=${KEY}&query=`;
+const search_api = `https://api.themoviedb.org/3/search/movie?&api_key=${KEY}&query=`;
 const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
 const mainContainerEl = document.querySelector(".main-container");
 const searchBtn = document.querySelector("#search-btn");
@@ -9,15 +9,15 @@ const searchEl = document.querySelector("#input");
 // fetch the movies
 const fetchMovies = async (url) => {
     fetch(url)
-    .then((response) => response?.json())
-    .then((data) => Movies(data?.results))
+        .then((response) => response?.json())
+        .then((data) => Movies(data?.results))
 };
 fetchMovies(trending);
 
 const Movies = (movies) => {
     mainContainerEl.innerHTML = "";
     movies.forEach((movie) => {
-        const {poster_path,backdrop_path,overview,original_title,release_date, name, first_air_date} = movie;
+        const { poster_path, backdrop_path, overview, original_title, release_date, name, first_air_date } = movie;
         const genre = document.createElement("div");
         genre.innerHTML = `
         <div class="movie_container">
@@ -42,11 +42,14 @@ const Movies = (movies) => {
 
 const searchMovie = () => {
     const searchInput = searchEl.value;
-    if(searchInput !== 0 && searchInput.trim()) {
-        fetchMovies(search_api + searchInput)
+    if (searchInput !== "" && searchInput.trim()) {
+        fetchMovies(search_api + searchInput);
     } else {
         return fetchMovies(trending)
     }
 };
-searchMovie();
-searchBtn.addEventListener("click", searchMovie);
+
+searchBtn.addEventListener("click", () => {
+    searchMovie();
+    searchEl.value = "";
+});
