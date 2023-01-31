@@ -35,7 +35,7 @@ body{
     position: absolute;
     width: 15px;
     height: 15px;
-    background: #008EFF;
+    background: #a600ff;
     border-radius: 50%;
     z-index: 10000;
 }
@@ -93,7 +93,7 @@ body{
     position: absolute;
     width: 2px;
     height: 150px;
-    background: #008EFF;
+    background: #bb00ff;
     border-radius: 6px 6px 0 0;
     z-index: 12;
 }
